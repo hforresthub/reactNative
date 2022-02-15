@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
-import { touchProps } from 'react-native-web/dist/cjs/modules/forwardedProps';
+// import { touchProps } from 'react-native-web/dist/cjs/modules/forwardedProps';
 
 export default function App() {
 	const [count, setCount] = useState(0)
