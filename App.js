@@ -1,11 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 // import { touchProps } from 'react-native-web/dist/cjs/modules/forwardedProps';
+import Extra from './Extra.js'
 
 export default function App() {
 	const [count, setCount] = useState(0)
-
+	
+	useEffect(() => {
+		console.log('Counted and count is ', count)
+	}, [count])
+	
 	return (
 		<View style={styles.container}>
 			<Text>Open up App.js to start working on your app!</Text>
@@ -33,6 +38,7 @@ const Testing = (props) => {
 	return (
 		<View style={styles.container}>
 			<Text>Hello {props.name}</Text>
+			<Extra />
 		</View>
 	)
 }
